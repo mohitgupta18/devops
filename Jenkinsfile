@@ -22,7 +22,7 @@ pipeline {
         }
         stage('push image') {
             steps{
-                sh 'docker push -f mohitg432/image:$BUILD_NUMBER'
+                sh 'docker push -f -u mohitg432/image:$BUILD_NUMBER'
             }
         }
 }
