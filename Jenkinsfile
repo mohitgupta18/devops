@@ -12,7 +12,7 @@ pipeline {
 
         stage('Build docker image') {
             steps {  
-                sh 'docker build -t mohitg432/image:$BUILD_NUMBER .'
+                sh 'docker build -t mohitg432/imagess:$BUILD_NUMBER .'
             }
         }
         stage('login to dockerhub') {
@@ -22,7 +22,7 @@ pipeline {
         }
         stage('push image') {
             steps{
-                sh 'docker push mohitg432/image:$BUILD_NUMBER'
+                sh 'docker push mohitg432/imagess:$BUILD_NUMBER'
             }
         }
 }
